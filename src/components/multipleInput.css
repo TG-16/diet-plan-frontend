@@ -1,0 +1,30 @@
+
+.singleInput div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: solid 1px; */
+    width: 70%;
+    height: 50%;
+    margin-top:-10%;
+}
+
+.singleInput div span {
+    background-color: var(--input-bg);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-sm);
+}
+
+.singleInput div span:has(input[type="radio"]:checked) {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+}
+
+.singleInput div span input {
+    display: none;
+}
+
+.singleInput div span {
+    font-size:13px;
+    padding: 4px 0;
+}

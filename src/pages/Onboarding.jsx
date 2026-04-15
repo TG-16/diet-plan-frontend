@@ -22,16 +22,12 @@ const OnBoarding = () => {
 
   const [next, setNext] = useState(1);
   const [name, setName] = useState("");
-  const [weight, setWeight] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState("");
+  const [height, setHeight] = useState("");
   const [goal, setGoal] = useState("");
   const [activity, setActivity] = useState("");
 
   const goToNextStep = () => setNext(next + 1);
-
-  useEffect(() => {
-    console.log("Updated profile:", dietPlan);
-  }, [dietPlan]);
 
   const handleSubmit = async () => {
     goToNextStep();
@@ -51,11 +47,12 @@ const OnBoarding = () => {
   };
 
   return (
-    <div>
+    <div className="onboarding">
       {next === 1 && (
         <SingleInput
           title={"Name"}
           type={"text"}
+          placeholderText={"Abebe"}
           state={name}
           setState={setName}
           goToNextStep={goToNextStep}
@@ -65,6 +62,7 @@ const OnBoarding = () => {
         <SingleInput
           title={"Weight"}
           type={"number"}
+          placeholderText={"64 Kg"}
           state={weight}
           setState={setWeight}
           goToNextStep={goToNextStep}
@@ -74,6 +72,7 @@ const OnBoarding = () => {
         <SingleInput
           title={"Height"}
           type={"number"}
+          placeholderText={"170 Cm"}
           state={height}
           setState={setHeight}
           goToNextStep={goToNextStep}
@@ -106,12 +105,6 @@ const OnBoarding = () => {
           nextText="Finish"
         />
       )}
-
-      <p>Name: {name}</p>
-      <p>Weight: {weight}</p>
-      <p>Height: {height}</p>
-      <p>Goal: {goal}</p>
-      <p>Activity: {activity}</p>
     </div>
   );
 };

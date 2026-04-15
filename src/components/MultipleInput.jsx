@@ -1,3 +1,5 @@
+import "./multipleInput.css";
+
 const MultipleChoiceInput = ({
   title,
   name,
@@ -7,33 +9,46 @@ const MultipleChoiceInput = ({
   goToNextStep,
 }) => {
   return (
-    <>
+    <div className="singleInput">
       <h2>{title}</h2>
-      <label>{values.firstValue}</label>
-      <input
-        type="radio"
-        name={name}
-        value={values.firstValue}
-        onChange={(e) => setState(e.target.value)}
-      />
+      <div>
+        <span>
+          <label for={values.firstValue}>{values.firstValue}</label>
+          <input
+            defaultChecked={true}
+            id={values.firstValue}
+            type="radio"
+            name={name}
+            value={values.firstValue}
+            onChange={(e) => setState(e.target.value)}
+          />
+        </span>
 
-      <label>{values.secondValue}</label>
-      <input
-        type="radio"
-        name={name}
-        value={values.secondValue}
-        onChange={(e) => setState(e.target.value)}
-      />
+        <span>
+          <label for={values.secondValue}>{values.secondValue}</label>
+          <input
+            id={values.secondValue}
+            type="radio"
+            name={name}
+            value={values.secondValue}
+            onChange={(e) => setState(e.target.value)}
+          />
+        </span>
 
-      <label>{values.thirdValue}</label>
-      <input
-        type="radio"
-        name={name}
-        value={values.thirdValue}
-        onChange={(e) => setState(e.target.value)}
-      />
+        <span>
+          <label for={values.thirdValue}>{values.thirdValue}</label>
+          <input
+            id={values.thirdValue}
+            type="radio"
+            name={name}
+            value={values.thirdValue}
+            onChange={(e) => setState(e.target.value)}
+          />
+        </span>
+      </div>
+
       <button onClick={goToNextStep}>{nextText}</button>
-    </>
+    </div>
   );
 };
 
