@@ -1,0 +1,585 @@
+{
+  "foods": [
+    { "name": "injera", "calories": 150, "protein": 4, "carbs": 30, "fat": 1, "category": "carb" },
+    { "name": "shiro", "calories": 350, "protein": 22, "carbs": 45, "fat": 10, "category": "protein" },
+    { "name": "misir_wot", "calories": 180, "protein": 12, "carbs": 25, "fat": 5, "category": "protein" },
+    { "name": "doro_wot", "calories": 240, "protein": 27, "carbs": 5, "fat": 14, "category": "protein" },
+    { "name": "atkilt", "calories": 90, "protein": 2, "carbs": 12, "fat": 3, "category": "vegetable" },
+    { "name": "rice", "calories": 130, "protein": 2, "carbs": 28, "fat": 0, "category": "carb" },
+    { "name": "bread", "calories": 260, "protein": 8, "carbs": 50, "fat": 3, "category": "carb" },
+    { "name": "pasta", "calories": 160, "protein": 6, "carbs": 30, "fat": 1, "category": "carb" },
+    { "name": "genfo", "calories": 200, "protein": 6, "carbs": 40, "fat": 2, "category": "carb" },
+    { "name": "kinche", "calories": 150, "protein": 5, "carbs": 32, "fat": 1, "category": "carb" }
+  ]
+}
+
+
+
+{
+  "baseMeals": [
+    {
+      "name": "injera_shiro",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "shiro", "grams": 150 }
+      ]
+    },
+    {
+      "name": "injera_misir",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "misir_wot", "grams": 150 }
+      ]
+    },
+    {
+      "name": "injera_doro",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "doro_wot", "grams": 150 }
+      ]
+    },
+    {
+      "name": "injera_mix",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "shiro", "grams": 100 },
+        { "name": "atkilt", "grams": 100 }
+      ]
+    },
+    {
+      "name": "rice_meat",
+      "mealType": "dinner",
+      "foods": [
+        { "name": "rice", "grams": 200 },
+        { "name": "doro_wot", "grams": 120 }
+      ]
+    },
+    {
+      "name": "bread_egg_breakfast",
+      "mealType": "breakfast",
+      "foods": [
+        { "name": "bread", "grams": 100 }
+      ]
+    },
+    {
+      "name": "genfo_breakfast",
+      "mealType": "breakfast",
+      "foods": [
+        { "name": "genfo", "grams": 200 }
+      ]
+    },
+    {
+      "name": "kinche_breakfast",
+      "mealType": "breakfast",
+      "foods": [
+        { "name": "kinche", "grams": 200 }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "foods": [
+    { "name": "injera", "calories": 150, "protein": 4, "carbs": 30, "fat": 1, "category": "carb" },
+    { "name": "shiro", "calories": 350, "protein": 22, "carbs": 45, "fat": 10, "category": "protein" },
+    { "name": "misir_wot", "calories": 180, "protein": 12, "carbs": 25, "fat": 5, "category": "protein" },
+    { "name": "kik_wot", "calories": 170, "protein": 10, "carbs": 28, "fat": 4, "category": "protein" },
+    { "name": "doro_wot", "calories": 240, "protein": 27, "carbs": 5, "fat": 14, "category": "protein" },
+    { "name": "tibs", "calories": 250, "protein": 26, "carbs": 2, "fat": 18, "category": "protein" },
+    { "name": "atkilt", "calories": 90, "protein": 2, "carbs": 12, "fat": 3, "category": "vegetable" },
+    { "name": "gomen", "calories": 70, "protein": 3, "carbs": 10, "fat": 2, "category": "vegetable" },
+
+    { "name": "rice", "calories": 130, "protein": 2, "carbs": 28, "fat": 0, "category": "carb" },
+    { "name": "bread", "calories": 260, "protein": 8, "carbs": 50, "fat": 3, "category": "carb" },
+    { "name": "pasta", "calories": 160, "protein": 6, "carbs": 30, "fat": 1, "category": "carb" },
+    { "name": "potato", "calories": 90, "protein": 2, "carbs": 21, "fat": 0, "category": "carb" },
+
+    { "name": "genfo", "calories": 200, "protein": 6, "carbs": 40, "fat": 2, "category": "carb" },
+    { "name": "kinche", "calories": 150, "protein": 5, "carbs": 32, "fat": 1, "category": "carb" },
+    { "name": "oatmeal", "calories": 180, "protein": 6, "carbs": 30, "fat": 3, "category": "carb" },
+
+    { "name": "egg", "calories": 70, "protein": 6, "carbs": 1, "fat": 5, "category": "protein" },
+    { "name": "milk", "calories": 120, "protein": 8, "carbs": 12, "fat": 5, "category": "mixed" },
+    { "name": "yogurt", "calories": 90, "protein": 6, "carbs": 8, "fat": 4, "category": "protein" },
+
+    { "name": "banana", "calories": 105, "protein": 1, "carbs": 27, "fat": 0, "category": "carb" },
+    { "name": "avocado", "calories": 160, "protein": 2, "carbs": 9, "fat": 15, "category": "fat" },
+
+    { "name": "oil", "calories": 90, "protein": 0, "carbs": 0, "fat": 10, "category": "fat" },
+    { "name": "butter", "calories": 100, "protein": 0, "carbs": 0, "fat": 11, "category": "fat" },
+    { "name": "peanut_butter", "calories": 190, "protein": 8, "carbs": 6, "fat": 16, "category": "mixed" }
+  ]
+}
+
+
+
+
+
+
+{
+  "baseMeals": [
+    {
+      "name": "injera_shiro",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "shiro", "grams": 150 }
+      ]
+    },
+    {
+      "name": "injera_misir",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "misir_wot", "grams": 150 }
+      ]
+    },
+    {
+      "name": "injera_kik",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "kik_wot", "grams": 150 }
+      ]
+    },
+    {
+      "name": "injera_doro",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "doro_wot", "grams": 150 }
+      ]
+    },
+    {
+      "name": "injera_tibs",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "tibs", "grams": 150 }
+      ]
+    },
+    {
+      "name": "injera_veg_mix",
+      "mealType": "lunch",
+      "foods": [
+        { "name": "injera", "grams": 200 },
+        { "name": "atkilt", "grams": 100 },
+        { "name": "gomen", "grams": 100 }
+      ]
+    },
+    {
+      "name": "rice_doro",
+      "mealType": "dinner",
+      "foods": [
+        { "name": "rice", "grams": 200 },
+        { "name": "doro_wot", "grams": 120 }
+      ]
+    },
+    {
+      "name": "pasta_meat",
+      "mealType": "dinner",
+      "foods": [
+        { "name": "pasta", "grams": 200 },
+        { "name": "tibs", "grams": 120 }
+      ]
+    },
+    {
+      "name": "rice_veg",
+      "mealType": "dinner",
+      "foods": [
+        { "name": "rice", "grams": 200 },
+        { "name": "atkilt", "grams": 150 }
+      ]
+    },
+    {
+      "name": "bread_breakfast",
+      "mealType": "breakfast",
+      "foods": [
+        { "name": "bread", "grams": 120 }
+      ]
+    },
+    {
+      "name": "genfo_breakfast",
+      "mealType": "breakfast",
+      "foods": [
+        { "name": "genfo", "grams": 200 }
+      ]
+    },
+    {
+      "name": "kinche_breakfast",
+      "mealType": "breakfast",
+      "foods": [
+        { "name": "kinche", "grams": 200 }
+      ]
+    },
+    {
+      "name": "oatmeal_breakfast",
+      "mealType": "breakfast",
+      "foods": [
+        { "name": "oatmeal", "grams": 200 }
+      ]
+    }
+  ]
+}
+
+
+{
+  "adjusters": [
+    { "name": "egg", "macros": { "protein": 6, "carbs": 1, "fat": 5 } },
+    { "name": "milk", "macros": { "protein": 8, "carbs": 12, "fat": 5 } },
+    { "name": "yogurt", "macros": { "protein": 6, "carbs": 8, "fat": 4 } },
+
+    { "name": "banana", "macros": { "protein": 1, "carbs": 27, "fat": 0 } },
+    { "name": "extra_injera", "macros": { "protein": 4, "carbs": 30, "fat": 1 } },
+    { "name": "bread_slice", "macros": { "protein": 3, "carbs": 15, "fat": 1 } },
+
+    { "name": "avocado", "macros": { "protein": 2, "carbs": 9, "fat": 15 } },
+    { "name": "oil", "macros": { "protein": 0, "carbs": 0, "fat": 10 } },
+    { "name": "butter", "macros": { "protein": 0, "carbs": 0, "fat": 11 } },
+
+    { "name": "peanut_butter", "macros": { "protein": 8, "carbs": 6, "fat": 16 } }
+  ]
+}
+
+
+Protein → ±5–10g
+Carbs   → ±10–20g
+Fat     → ±5–10g
+Calories → ±50–100 kcal
+
+Protein (VERY IMPORTANT)
+±5g → excellent
+±10g → acceptable
+
+
+🔹 Carbs
+±10–15g → excellent
+±20g → acceptable
+
+
+Fat
+±5g → excellent
+±10g → acceptable
+
+
+Calories (Final Check)
+±50 kcal → excellent
+±100 kcal → acceptable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This is where your app becomes **smart instead of robotic**.
+
+You already have one great rule:
+
+> ❌ no same protein 2 days in a row
+
+Now let’s build a **complete rule system** — not too strict (breaks flexibility), not too loose (bad UX).
+
+---
+
+# 🧠 Rule System Categories
+
+Think in **4 layers**:
+
+```txt
+1. Variety rules
+2. Cultural rules
+3. Nutrition rules
+4. Practical rules
+```
+
+---
+
+# 🔥 1. VARIETY RULES (User Experience)
+
+These prevent boring plans.
+
+---
+
+## ✅ Rule 1 — Rotate Main Protein
+
+```txt
+Don’t repeat same main protein in consecutive days
+```
+
+Example:
+
+* Day 1 → doro
+* Day 2 → ❌ doro
+* Day 2 → ✔ misir / shiro / tibs
+
+---
+
+## ✅ Rule 2 — Limit Weekly Repetition
+
+```txt
+Same base meal ≤ 2 times per week
+```
+
+👉 Avoid:
+
+* injera_shiro every day ❌
+
+---
+
+## ✅ Rule 3 — Mix Meal Types
+
+```txt
+Don’t use same meal type pattern every day
+```
+
+Example:
+
+* Day 1 → injera lunch
+* Day 2 → rice or pasta dinner
+
+---
+
+## ✅ Rule 4 — Adjuster Variety
+
+```txt
+Don’t spam same adjuster
+```
+
+Example:
+
+* egg max 4–5 times/week
+* milk max 3–4 times/week
+
+---
+
+# 🇪🇹 2. CULTURAL RULES (VERY IMPORTANT FOR YOU)
+
+This is your competitive advantage.
+
+---
+
+## ✅ Rule 5 — Respect Food Pairing
+
+```txt
+Avoid culturally weird combos
+```
+
+Examples:
+
+* ❌ shiro + milk
+* ❌ doro + banana
+* ❌ injera + peanut butter
+
+---
+
+## ✅ Rule 6 — Injera Priority (Lunch)
+
+```txt
+At least 4–5 lunches/week should be injera-based
+```
+
+👉 keeps it Ethiopian-first
+
+---
+
+## ✅ Rule 7 — Breakfast Style
+
+```txt
+Breakfast = light/simple foods
+```
+
+Examples:
+
+* bread + egg
+* kinche
+* genfo
+
+👉 Avoid:
+
+* ❌ doro wot breakfast
+
+---
+
+# 🧠 3. NUTRITION RULES (Health + Logic)
+
+---
+
+## ✅ Rule 8 — Protein Minimum
+
+```txt
+Daily protein must hit at least 90–95% of target
+```
+
+👉 This is NON-NEGOTIABLE
+
+---
+
+## ✅ Rule 9 — Calorie Range
+
+```txt
+Stay within ±100 kcal
+```
+
+---
+
+## ✅ Rule 10 — Avoid Extreme Meals
+
+```txt
+No meal should be:
+- too low (<300 kcal)
+- too high (>1200 kcal)
+```
+
+---
+
+## ✅ Rule 11 — Balance Meals
+
+```txt
+Each meal should have:
+- protein source
+- carb source
+```
+
+👉 Avoid:
+
+* ❌ pure carb meals (only bread, only rice)
+
+---
+
+# ⚙️ 4. PRACTICAL RULES (REAL LIFE)
+
+These make your app usable.
+
+---
+
+## ✅ Rule 12 — Ingredient Overlap
+
+```txt
+Reuse ingredients across day (slightly)
+```
+
+Example:
+
+* injera used in lunch & dinner → OK
+
+👉 reduces cost (important in Ethiopia)
+
+---
+
+## ✅ Rule 13 — Simplicity
+
+```txt
+Max 4–5 items per meal
+```
+
+👉 avoid:
+
+* 8-item meals ❌
+
+---
+
+## ✅ Rule 14 — Cooking Realism
+
+```txt
+Meals should be cookable
+```
+
+👉 avoid:
+
+* random mixing just to match macros
+
+---
+
+# 🧠 BONUS — SCORING SYSTEM (ADVANCED 🔥)
+
+Instead of strict rules, assign score:
+
+```txt
++10 → good macro match
++8  → new protein
++5  → culturally correct
+-10 → repetition
+-15 → bad combo
+```
+
+👉 pick highest score meal
+
+---
+
+# 🔥 Minimum Rules for Your MVP
+
+Don’t implement everything now.
+
+Start with:
+
+```txt
+1. No same protein consecutive days
+2. Same meal ≤ 2 times/week
+3. Protein must be within range
+4. No weird food combinations
+5. Meal must include protein + carb
+```
+
+---
+
+# 💡 Real Insight
+
+Too many rules = system breaks
+Too few rules = bad plans
+
+👉 You want **controlled flexibility**
+
+---
+
+# 🚀 Final Thought
+
+You’re no longer just building:
+
+> a meal generator
+
+You’re building:
+
+> a **decision system with constraints**
+
+---
+
+# 👉 Next Step
+
+We can now:
+
+### A → Implement **weekly planner with these rules (Node.js)**
+
+### B → Build **scoring system (smart meal selection)**
+
+### C → Improve **meal generator accuracy (grams adjustment)**
+
+Pick one 👍
+
+
+
