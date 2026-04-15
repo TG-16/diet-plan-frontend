@@ -12,12 +12,15 @@ import Loading from "./pages/Loading";
 import MealDescription from "./pages/MealDescription";
 
 function App() {
-  // const loadingContext = createContext();
+  const populate = (state) => {
+    const saved = localStorage.getItem(state);
+    return saved ? JSON.parse(saved) : {};
+  };
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [dietPlan, setDietPlan] = useState({});
-  const [profile, setProfile] = useState({});
+  const [profile, setProfile] = useState(populate("profile"));
+  const [dietPlan, setDietPlan] = useState(populate("dietPlan"));
   const [mealDetail, setMealDetail] = useState({});
+
   return (
     <dietPlanContext.Provider value={{ dietPlan, setDietPlan }}>
       <mealDetailContext.Provider value={{ mealDetail, setMealDetail }}>
@@ -28,6 +31,7 @@ function App() {
                 <Route path="/" element={<OnBoarding />} />
                 <Route path="/weeklyDietPlan" element={<WeeklyDiet />} />
                 <Route path="/mealDescription" element={<MealDescription />} />
+                <Route path="/loading" element={<Loading />} />
               </Routes>
             </BrowserRouter>
 

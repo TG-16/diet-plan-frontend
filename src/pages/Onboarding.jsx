@@ -6,11 +6,19 @@ import SingleInput from "../components/SingleInput";
 import MultipleChoiceInput from "../components/MultipleInput";
 import { onboard } from "../services/apiCalles";
 
-const OnBoarding = ({ setIsLoading }) => {
+const OnBoarding = () => {
   const navigate = useNavigate();
 
   const { profile, setProfile } = useContext(profileContext);
   const { dietPlan, setDietPlan } = useContext(dietPlanContext);
+
+  useEffect(() => {
+    localStorage.setItem("profile", JSON.stringify(profile));
+  }, [profile]);
+
+  useEffect(() => {
+    localStorage.setItem("dietPlan", JSON.stringify(dietPlan));
+  }, [dietPlan]);
 
   const [next, setNext] = useState(1);
   const [name, setName] = useState("");
@@ -27,7 +35,7 @@ const OnBoarding = ({ setIsLoading }) => {
 
   const handleSubmit = async () => {
     goToNextStep();
-    // setIsLoading(true);
+    navigate("/loading");
     const recivedDietPlane = await onboard({
       name,
       height,
@@ -36,10 +44,9 @@ const OnBoarding = ({ setIsLoading }) => {
       activity,
     });
 
-    await setProfile({ name, height, weight, goal });
-    await setDietPlan(recivedDietPlane);
+    setProfile({ name, height, weight, goal });
+    setDietPlan(recivedDietPlane);
 
-    // setIsLoading(false);
     navigate("/weeklyDietPlan");
   };
 

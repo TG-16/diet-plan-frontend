@@ -31,7 +31,7 @@ const MealDescription = () => {
         </div>
       </div>
       <p>ads on list goes with phots</p>
-      <button onClick={ () => navigate("/weeklyDietPlan")}>back</button>
+      <button onClick={() => navigate("/weeklyDietPlan")}>back</button>
     </>
   );
 };

@@ -5,13 +5,9 @@ import {
   dietPlanContext,
   mealDetailContext,
 } from "../services/AppContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 const WeeklyDiet = ({}) => {
-  // useEffect(() => {
-  //   console.log("Updated diet:", dietPlan);
-  // }, [dietPlan]);
-
   const navigate = useNavigate();
 
   const { profile, setProfile } = useContext(profileContext);
@@ -22,9 +18,10 @@ const WeeklyDiet = ({}) => {
   const weeklyPlan = dietPlan.diet_plan.weekly_diet_plan;
 
   const handleShowDetail = (dailyPlan) => {
+    navigate("/loading");
     setMealDetail(dailyPlan);
-    navigate("/mealDescription")
-  }
+    navigate("/mealDescription");
+  };
 
   return (
     <>
