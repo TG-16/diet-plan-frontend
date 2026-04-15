@@ -1,3 +1,18 @@
+import { useNavigate } from "react-router-dom";
+
+function Login() {
+  const navigate = useNavigate();
+
+  function handleLogin() {
+    navigate("/dashboard");
+  }
+
+  return <button onClick={handleLogin}>Login</button>;
+}
+
+
+
+
 {
   "foods": [
     { "name": "injera", "calories": 150, "protein": 4, "carbs": 30, "fat": 1, "category": "carb" },

@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { profileContext, dietPlanContext } from "../services/AppContext";
 
 import SingleInput from "../components/SingleInput";
 import MultipleChoiceInput from "../components/MultipleInput";
 import { onboard } from "../services/apiCalles";
 
-const OnBoarding = ({setDietPlane, setIsLoading}) => {
+const OnBoarding = ({ setIsLoading }) => {
+  const navigate = useNavigate();
+
+  const { profile, setProfile } = useContext(profileContext);
+  const { dietPlan, setDietPlan } = useContext(dietPlanContext);
+
   const [next, setNext] = useState(1);
   const [name, setName] = useState("");
   const [weight, setWeight] = useState(0);
@@ -14,14 +21,27 @@ const OnBoarding = ({setDietPlane, setIsLoading}) => {
 
   const goToNextStep = () => setNext(next + 1);
 
+  useEffect(() => {
+    console.log("Updated profile:", dietPlan);
+  }, [dietPlan]);
+
   const handleSubmit = async () => {
     goToNextStep();
-    setIsLoading(true);
-    const recivedDietPlane = await onboard({name, height, weight, goal, activity});
+    // setIsLoading(true);
+    const recivedDietPlane = await onboard({
+      name,
+      height,
+      weight,
+      goal,
+      activity,
+    });
 
-    setDietPlane(recivedDietPlane);
-    setIsLoading(false);
-  }
+    setProfile({ name, height, weight, goal });
+    setDietPlan(recivedDietPlane);
+
+    // setIsLoading(false);
+    navigate("/weeklyDietPlan");
+  };
 
   return (
     <div>
