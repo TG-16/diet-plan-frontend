@@ -1,0 +1,50 @@
+.dailyMeal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    width: 80%;
+    align-self: center;
+    margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    transition: all ease 0.3s;
+}
+
+.dailyMeal:hover {
+    border-bottom: var(--primary-color);
+    border-bottom-style: solid;
+}
+
+.dates {
+    font-size: 11px;
+    rotate: -40deg;
+}
+
+.dailyMeal div {
+    /* border: solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 25%;
+}
+
+.dailyMeal div img {
+    width: 50%;
+    /* border: solid; */
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 0;
+    box-shadow: var(--shadow-sm);
+    transition: all ease 0.3s;
+}
+
+.dailyMeal div img:hover
+{
+    box-shadow: var(--shadow-md);
+}
+
+.dailyMeal div p {
+    margin: 3px 0;
+}

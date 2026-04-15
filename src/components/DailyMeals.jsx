@@ -1,10 +1,12 @@
-const DailyMeals = ({ day, breakFast, lunch, dinner, onClick }) => {
+import "./dailyMeal.css";
 
+const DailyMeals = ({ day, breakFast, lunch, dinner, onClick }) => {
   return (
     <>
-      <div onClick={onClick}>
+      <div onClick={onClick} className="dailyMeal">
+        <p className="dates">{day}</p>
         <div>
-          <img src="favicon.ico" />
+          <img src="logo192.png" />
           <p>{breakFast.meal}</p>
         </div>
 
@@ -14,7 +16,7 @@ const DailyMeals = ({ day, breakFast, lunch, dinner, onClick }) => {
         </div>
 
         <div>
-          <img src="favicon.ico" />
+          <img src="logo192.png" />
           <p>{dinner.meal}</p>
         </div>
       </div>

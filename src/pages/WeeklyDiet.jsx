@@ -6,6 +6,7 @@ import {
   mealDetailContext,
 } from "../services/AppContext";
 import { useContext } from "react";
+import "./weeklyDiet.css";
 
 const WeeklyDiet = ({}) => {
   const navigate = useNavigate();
@@ -24,20 +25,21 @@ const WeeklyDiet = ({}) => {
   };
 
   return (
-    <>
-      <p>Weekly diet will be displayed along with user profile and goal</p>
-      <div>
+    <div className="weeklyDiet">
+      <div className="profilePic">
         <img src="logo512.png" />
       </div>
 
-      <div>
-        <p>{name}</p>
-        <p>{goal}</p>
-      </div>
+      <div className="profile">
+        <div>
+          <p>Name: <i> {profile.name}</i></p>
+          <p>Goal: <b>{profile.goal}</b></p>
+        </div>
 
-      <div>
-        <p>{weight}</p>
-        <p>{height}</p>
+        <div>
+          <p>Weight: <i>{profile.weight} Kg</i></p>
+          <p>Height: <i>{profile.height} Cm</i></p>
+        </div>
       </div>
 
       {weeklyPlan.map((dailyPlan) => {
@@ -52,7 +54,7 @@ const WeeklyDiet = ({}) => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 

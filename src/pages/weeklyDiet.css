@@ -1,0 +1,33 @@
+.weeklyDiet {
+    /* border: solid red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePic {
+    /* background-color: var(--primary-color); */
+    width: 16vh;
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid purple; */
+    border-radius: 50%;
+    align-self: center;
+    box-shadow: var(--shadow-md);
+    margin-top: var(--space-lg);
+}
+
+.profilePic img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.profile {
+    /* border: solid; */
+    display: flex;
+    justify-content: space-around;
+    margin: var(--space-md);
+}
+
