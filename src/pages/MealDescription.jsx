@@ -1,4 +1,4 @@
-const MealDescription = ({ mealDetail, setMealDetailNull}) => {
+const MealDescription = () => {
   return (
     <>
       <h2>{mealDetail.meal_type}</h2>

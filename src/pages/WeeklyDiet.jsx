@@ -1,8 +1,30 @@
 import DailyMeals from "../components/DailyMeals";
+import { useNavigate } from "react-router-dom";
+import {
+  profileContext,
+  dietPlanContext,
+  mealDetailContext,
+} from "../services/AppContext";
+import { useContext, useEffect } from "react";
 
-const WeeklyDiet = ({ dietPlan, setMealDetail }) => {
-  const { name, goal, height, weight } = dietPlan.profile;
+const WeeklyDiet = ({}) => {
+  // useEffect(() => {
+  //   console.log("Updated diet:", dietPlan);
+  // }, [dietPlan]);
+
+  const navigate = useNavigate();
+
+  const { profile, setProfile } = useContext(profileContext);
+  const { dietPlan, setDietPlan } = useContext(dietPlanContext);
+  const { mealDetail, setMealDetail } = useContext(mealDetailContext);
+
+  const { name, goal, height, weight } = profile;
   const weeklyPlan = dietPlan.diet_plan.weekly_diet_plan;
+
+  const handleShowDetail = (dailyPlan) => {
+    setMealDetail(dailyPlan);
+    navigate("/mealDescription")
+  }
 
   return (
     <>
@@ -22,14 +44,16 @@ const WeeklyDiet = ({ dietPlan, setMealDetail }) => {
       </div>
 
       {weeklyPlan.map((dailyPlan) => {
-        return <DailyMeals
-          key={dailyPlan.day}
-          day={dailyPlan.day}
-          breakFast={dailyPlan.breakfast}
-          lunch={dailyPlan.lunch}
-          dinner={dailyPlan.dinner}
-          onClick={() => setMealDetail(dailyPlan)}
-        />;
+        return (
+          <DailyMeals
+            key={dailyPlan.day}
+            day={dailyPlan.day}
+            breakFast={dailyPlan.breakfast}
+            lunch={dailyPlan.lunch}
+            dinner={dailyPlan.dinner}
+            onClick={() => handleShowDetail(dailyPlan)}
+          />
+        );
       })}
     </>
   );

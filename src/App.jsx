@@ -1,6 +1,10 @@
 import { useState, createContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { profileContext, dietPlanContext } from "./services/AppContext";
+import {
+  profileContext,
+  dietPlanContext,
+  mealDetailContext,
+} from "./services/AppContext";
 import "./App.css";
 import OnBoarding from "./pages/Onboarding";
 import WeeklyDiet from "./pages/WeeklyDiet";
@@ -13,15 +17,17 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [dietPlan, setDietPlan] = useState({});
   const [profile, setProfile] = useState({});
+  const [mealDetail, setMealDetail] = useState({});
   return (
     <dietPlanContext.Provider value={{ dietPlan, setDietPlan }}>
-      <profileContext.Provider value={{ profile, setProfile }}>
-
+      <mealDetailContext.Provider value={{ mealDetail, setMealDetail }}>
+        <profileContext.Provider value={{ profile, setProfile }}>
           <div className="App">
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<OnBoarding />} />
                 <Route path="/weeklyDietPlan" element={<WeeklyDiet />} />
+                <Route path="/mealDescription" element={<MealDescription />} />
               </Routes>
             </BrowserRouter>
 
@@ -37,8 +43,8 @@ function App() {
 
       {mealDetail !== null && <MealDescription  mealDetail={mealDetail} setMealDetailNull={() => setDietPlane(null)} />} */}
           </div>
-      
-      </profileContext.Provider>
+        </profileContext.Provider>
+      </mealDetailContext.Provider>
     </dietPlanContext.Provider>
   );
 }

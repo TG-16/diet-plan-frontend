@@ -36,8 +36,8 @@ const OnBoarding = ({ setIsLoading }) => {
       activity,
     });
 
-    setProfile({ name, height, weight, goal });
-    setDietPlan(recivedDietPlane);
+    await setProfile({ name, height, weight, goal });
+    await setDietPlan(recivedDietPlane);
 
     // setIsLoading(false);
     navigate("/weeklyDietPlan");
