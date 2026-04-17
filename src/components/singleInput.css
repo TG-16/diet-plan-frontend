@@ -2,14 +2,14 @@
     /* border: solid 1px; */
     background-color: var(--card-bg);
     width: 80%;
-    height: 42vh;
+    height: 42dvh;
     display: flex;
     flex-direction: column;
     justify-self: center;
     align-items: center;
     justify-content: center;
     justify-content: space-around;
-    margin-top: 20vh;
+    margin-top: 20dvh;
     box-shadow: var(--shadow-md);
     border-radius: var(--radius-md);
 }
@@ -29,6 +29,8 @@
     box-shadow: var(--shadow-sm);
     outline: none;
     border-bottom: 2px solid transparent;
+    height: 11%;
+    font-size:large;
     padding: 4px 0;
     padding-left: 5%;
     transition: border-color 0.3s ease;
@@ -46,6 +48,8 @@
     color: var(--button-text); 
     border-radius: var(--radius-sm);
     width: 30%;
+    height: 11%;
+    font-size: large;
     border: none;
     padding: var(--space-xs);
     box-shadow: var(--shadow-md);

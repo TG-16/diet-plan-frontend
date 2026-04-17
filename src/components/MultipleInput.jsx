@@ -1,4 +1,5 @@
 import "./multipleInput.css";
+import { useEffect } from "react";
 
 const MultipleChoiceInput = ({
   title,
@@ -8,12 +9,16 @@ const MultipleChoiceInput = ({
   nextText = "Next",
   goToNextStep,
 }) => {
+  useEffect(() => {
+    setState(values.firstValue);
+  }, []);
+
   return (
     <div className="singleInput">
       <h2>{title}</h2>
       <div>
         <span>
-          <label for={values.firstValue}>{values.firstValue}</label>
+          <label htmlFor={values.firstValue}>{values.firstValue}</label>
           <input
             defaultChecked={true}
             id={values.firstValue}
@@ -25,7 +30,7 @@ const MultipleChoiceInput = ({
         </span>
 
         <span>
-          <label for={values.secondValue}>{values.secondValue}</label>
+          <label htmlFor={values.secondValue}>{values.secondValue}</label>
           <input
             id={values.secondValue}
             type="radio"
@@ -36,7 +41,7 @@ const MultipleChoiceInput = ({
         </span>
 
         <span>
-          <label for={values.thirdValue}>{values.thirdValue}</label>
+          <label htmlFor={values.thirdValue}>{values.thirdValue}</label>
           <input
             id={values.thirdValue}
             type="radio"

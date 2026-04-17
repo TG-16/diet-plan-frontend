@@ -13,11 +13,22 @@ const MealDescription = () => {
       {
         //must change the image dynamically later from the front end only
       }
-      
+      <p className="day">{mealDetail.day}</p>
+      <div className="headings">
+        <p>Main meal</p>
+        <p>Nutrients</p>
+        <p>Ads on</p>
+      </div>
       <Description meal={mealDetail.breakfast} />
 
-      <p>ads on list goes with phots</p>
-      <button onClick={() => navigate("/weeklyDietPlan")}>back</button>
+      <Description meal={mealDetail.lunch} />
+
+      <Description meal={mealDetail.dinner} />
+
+      {/* <p>ads on list goes with phots</p> */}
+      <button className="back" onClick={() => navigate("/weeklyDietPlan")}>
+        back
+      </button>
     </>
   );
 };
